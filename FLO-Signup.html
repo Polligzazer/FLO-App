@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="FLO_Signup.css">
+		<link rel="stylesheet" href="loading.css">
+		<script src="form-errors.js"></script>
+		<script src="loading.js"></script>
+		<title> FLO Application</title>
+		<link rel="icon" type="image/x-icon" href="Flo_Logof.png">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ruda:wght@400..900&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<div class="content">
+			<div class="FLO_LOGO">
+				<img src="_FLO_LOGO.png" id="logo">
+				<p id="desc">Returning lost objects, one item <br> at a time.</p>
+			</div>
+			<div class="sign-up"> 
+				<p id="sign-uptext">Sign-up</p>
+				<form>
+					<input type="email" id="email" placeholder="&nbsp;Email" name="email" required>
+					<input type="number" id="suid" placeholder="&nbsp;School Id" name="schoolid" pattern="\w{1,6}" required>
+					<input type="password" id="password" placeholder="&nbsp;Password" name="password" required>
+					<button type="submit" id="sign-upbutton">Signup</button>
+				</form>
+				<p id="haveacc">Alredy have an account? <a href="FLO-Login.html">Login</a> </p>
+			</div>
+		</div>
+		<div id="circle1"></div>
+		<div id="circle2"></div>
+		
+		<div id="loadercontent"> 
+			<img src="_FLO_LOGO.png" id="loader-logo">
+			<span class="loader">
+			<span class="loader-inner">
+			</span>
+			</span> 
+		</div>
+	</body>
+</html>
