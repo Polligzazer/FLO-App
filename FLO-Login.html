@@ -2,8 +2,7 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="FLO-acc.css">
-		<link rel="stylesheet" href="loading.css">
-		<script src="loading.js"></script>
+		<script src="FLO_InputValidation.js"></script>
 		<title>FLO Application</title>
 		<link rel="icon" type="image/x-icon" href="Flo_Logof.png">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,28 +12,28 @@
 	<body>
 		<div class="content">
 			<div class="FLO_introduction">
-				<img src="FLO_LOGO-main.png" id="logo">
+				<img src="main_LOGO.png" id="logo">
+				<div class="circle">
+					<div id="circle1"></div>
+					<div id="circle2"></div>
+				</div>
 			</div>
 			<div class="log-in"> 
 				<p id="logintext">Login</p>
 				<form>
-					<input type="email" id="email" placeholder="&nbsp;Email" name="email">
-					<input type="password" id="password" placeholder="&nbsp;Password" name="password">
+					<input type="email" id="userEmail" placeholder="&nbsp;School Email" onkeyup="logInInputValidation()">
+					<div class="userEmailError">
+						<span id="logInEmailError"></span>
+					</div>
+					<input type="password" id="userPassword" placeholder="&nbsp;Password" onkeyup="logInInputValidation()">
+					<div class="userPasswordError">
+						<span id="logInPasswordError"></span>
+					</div>
 				</form>
 				<a id="forgotpass" href="Reset_password.html">Forgot Password?</a>				
-				<button id="logbutton">Login</button>
+				<button id="logbutton" onclick="logInInputValidation()">Login</button>
 				<p id="haveacc">Doesn't have an account? <a href="FLO-Signup.html">Sign-up</a> </p>
 			</div>
-		</div>
-		<div id="circle1"></div>
-		<div id="circle2"></div>
-		
-		<div id="loadercontent"> 
-			<img src="_FLO_LOGO.png" id="loader-logo">
-			<span class="loader">
-			<span class="loader-inner">
-			</span>
-			</span> 
 		</div>
 	</body>
 </html>

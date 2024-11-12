@@ -2,9 +2,8 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="FLO_Signup.css">
-		<link rel="stylesheet" href="loading.css">
-		<script src="form-errors.js"></script>
-		<script src="loading.js"></script>
+		<script src="FLO_InputValidation.js"></script>
+		<script src="updatelogo.js"></script>
 		<title> FLO Application</title>
 		<link rel="icon" type="image/x-icon" href="Flo_Logof.png">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,24 +18,31 @@
 			</div>
 			<div class="sign-up"> 
 				<p id="sign-uptext">Sign-up</p>
-				<form>
-					<input type="email" id="email" placeholder="&nbsp;Email" name="email" required>
-					<input type="number" id="suid" placeholder="&nbsp;School Id" name="schoolid" pattern="\w{1,6}" required>
-					<input type="password" id="password" placeholder="&nbsp;Password" name="password" required>
-					<button type="submit" id="sign-upbutton">Signup</button>
+				<form onsubmit="return validateForm(event)"> 
+					<input type="email" id="email" placeholder="&nbsp;School Email" onkeyup="inputValidation()">
+					<div class="emailError">
+						<span id="emailError"></span>
+					</div>	
+					<input type="number" id="suid" placeholder="&nbsp;School Id" onkeyup="inputValidation()">
+					<div class="IdError">
+						<span id="idError"></span>
+					</div>
+					<input type="password" id="password" placeholder="&nbsp;Password" onkeyup="inputValidation()">
+					<div class="passwordError">	
+						<span id="passwordError"></span>
+					</div>	
+				<div class="checkbox">
+						<input type="checkbox" id="agreeCheckBox" required>
+						<label for="agreeCheckBox"> I have read and agree to the<br> <a href="" id="link">Terms & Conditions<a/></label>
+					</div>
+					<button type="submit" id="sign-upbutton" onclick="inputValidation()">Signup</button>
 				</form>
-				<p id="haveacc">Alredy have an account? <a href="FLO-Login.html">Login</a> </p>
+				<p id="haveacc">Already have an account?<a href="FLO-Login.html" id="link">&nbsp;Login</a></p>
 			</div>
 		</div>
 		<div id="circle1"></div>
 		<div id="circle2"></div>
 		
-		<div id="loadercontent"> 
-			<img src="_FLO_LOGO.png" id="loader-logo">
-			<span class="loader">
-			<span class="loader-inner">
-			</span>
-			</span> 
-		</div>
+		
 	</body>
 </html>
